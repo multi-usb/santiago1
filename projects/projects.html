@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Portfolio de Santiago Labrador, Ingeniero Especialista en Diseño y Desarrollo Multimedia.">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Work || Santiago Labrador</title>
+
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" href="../Images/15.png">
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+</head>
+<body class="home">
+
+      <div class="wrapper">
+            <div class="hero-section">   
+                  <div class="nav">
+                      
+                        <div class="artist"><a href="/index.html" style="color:white">Santiago Labrador</a></div>
+                        <div class="watch"><a href="https://vimeo.com/997574592?share=copy" target="_blank" style="color:white; text-decoration: none;"><ion-icon name="play"></ion-icon></a> watch now</div>
+                        
+                        <div class="menu-open"><ion-icon name="menu"></ion-icon></div>
+                        <div class="container">
+                            <div class="container__item container__item-header">
+                                <h1>Multimedia<br>Projects<br>&#8594</h1>
+                                
+                            </div>
+                
+                            <div class="container__item container__item-1" onclick="location.href='1/Design.html';" style="cursor: pointer;">
+                                <h1 class="container__item-title">
+                                    <a href="1/Design.html" style="color:white; text-decoration: none;">Design</a>
+                                </h1>
+                            </div>
+                            <div class="container__item container__item-2" onclick="location.href='2/VR.html';" style="cursor: pointer;">
+                                <h1 class="container__item-title">
+                                    <a href="2/VR.html"  style="color:white; text-decoration: none;">VR // Videogames</a>
+                                </h1>
+                            </div>
+                            <div class="container__item container__item-3" onclick="location.href='3/Audiovisual.html';" style="cursor: pointer;">
+                                <h1 class="container__item-title">
+                                    <a href="3/Audiovisual.html"  style="color:white; text-decoration: none;">Audiovisual // Animation</a>
+                                </h1>
+                            </div>
+                            <div class="container__item container__item-4" id="last-Item" onclick="location.href='4/Web.html';" style="cursor: pointer;" >
+                                <h1 class="container__item-title">
+                                    <a href="4/Web.html"  style="color:white; text-decoration: none;">Web Development</a>
+                                </h1>
+                            </div>
+                           <!-- <div class="container__item container__item-5">
+                                <h1 class="container__item-title">
+                                    <a href="5/design.html"  style="color:white; text-decoration: none;">Design</a>
+                                </h1>
+                            </div>
+                            <div class="container__item container__item-6">
+                                <h1 class="container__item-title">
+                                    <a href="6/Front.html"  style="color:white; text-decoration: none;">FrontEnd Development</a>
+                                </h1>
+                            </div> -->
+                        </div>
+                        <div class="nav-container">
+                            
+                            <div class="menu-close">close</div>
+                            <nav class="menu">
+                                <div class="menu__item">
+                                    <a class="menu__item-link" href="/index.html" style="color:white;text-decoration: none;">Home</a>
+                                    <img class="menu__item-img" src="Images/menu-img-one.jpg" />
+                                    <div class="marquee">
+                                        <div class="marquee__inner">
+                                            <span>Home - Home - Home - Home - Home - Home - Home</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu__item">
+                                    <a class="menu__item-link" href="projects/index.html" style="color:white; text-decoration: none;">Projects</a>
+                                    <img class="menu__item-img" src="Images/menu-img-two.png" />
+                                    <div class="marquee">
+                                        <div class="marquee__inner">
+                                            <span
+                                                >Projects - Projects - Projects - Projects - Projects - Projects
+                                                - Projects</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu__item">
+                                    <a class="menu__item-link" href="/about/about.html" style="color:white">About</a>
+                                    <img class="menu__item-img" src="Images/menu-img-three.png" />
+                                    <div class="marquee">
+                                        <div class="marquee__inner">
+                                            <span>About - About - About - About - About - About - About</span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </nav>
+                        </div>
+                  </div>  
+                  <div class="gif-overlay"></div>
+                  <!-- horizontal scroll items -->
+        
+                  
+
+                  
+            </div>
+        
+            
+      </div>
+ <!-- script -->
+      <script type="text/javascript" src="https://rawgit.com/peterhry/CircleType/master/dist/circletype.min.js"></script>
+     
+    <script src="Librerias/horizontal-scroll.js"></script>
+
+<script>
+     TweenMax.from(".container", 2, {
+      delay: 0.8,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".artist", 2, {
+      delay: 0.7,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".watch", 2, {
+      delay: 0.6,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+      TweenMax.from(".menu-open", 2, {
+      delay: 0.5,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+      });
+
+      var t1 = new TimelineMax({ paused: true });
+
+t1.to(".nav-container", 1, {
+    left: 0,
+    ease: Expo.easeInOut,
+});
+
+t1.staggerFrom(
+    ".menu > div",
+    0.8,
+    { y: 100, opacity: 0, ease: Expo.easeOut },
+    "0.1",
+    "-=0.4"
+);
+
+t1.staggerFrom(
+    ".socials",
+    0.8,
+    { y: 100, opacity: 0, ease: Expo.easeOut },
+    "0.4",
+    "-=0.6"
+);
+
+t1.reverse();
+$(document).on("click", ".menu-open", function () {
+    t1.reversed(!t1.reversed());
+});
+$(document).on("click", ".menu-close", function () {
+    t1.reversed(!t1.reversed());
+});
+      
+document.addEventListener('DOMContentLoaded', function () {
+    var blocks = document.getElementsByClassName("container__item");
+    var container = document.getElementsByClassName("container");
+
+    function initHorizontalScroll() {
+        if (window.innerWidth > 768) { // Ajusta el tamaño de pantalla según sea necesario
+            new HorizontalScroll.default({
+                blocks: blocks,
+                container: container,
+                isAnimated: true,
+                springEffect: 0.8,
+            });
+        } else {
+            // Aquí puedes agregar código específico para el scroll vertical si es necesario
+        }
+    }
+
+    // Inicializa el scroll cuando el documento esté listo
+    initHorizontalScroll();
+
+    // Recalcula el scroll cuando la ventana se redimensiona
+    window.addEventListener('resize', initHorizontalScroll);
+});
+
+</script>
+</body>
+</html>
