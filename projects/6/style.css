@@ -1,0 +1,388 @@
+html, body {
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    height: 100vh;
+    font-family: "Helvetica";
+    background: url(https://media.giphy.com/media/DCKzbW6NzzzB6/giphy.gif) no-repeat 50% 50%;
+    background-size: cover;
+    text-transform: uppercase;
+}
+.home {
+    overflow: hidden;
+}
+
+.gif-overlay {
+    z-index: -1;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(14, 14, 14, 0.8);
+    opacity: 100%;
+}
+
+.nav {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.artist {
+    z-index: 0;
+    position: fixed;
+    line-height: 80px;
+    margin: 0 40px;
+    color: white;
+    
+}
+
+
+
+.watch {
+    z-index: 0;
+    position: fixed;
+    right: 140px;
+    line-height: 80px;
+    margin: 0 40px;
+    color: grey;
+    padding: 0 10px;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+.watch ion-icon {
+    z-index: 2;
+    position: relative;
+    top: 1px;
+    padding-right: 6px;
+}
+
+.menu-open{
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    font-size: 20px;
+    line-height: 80px;
+    margin: 0 40px;
+    color: #fff;
+    padding-top: 4px;
+}
+.menu-close {
+    z-index: 0;
+    position: fixed;
+    right: 0;
+    font-size: 20px;
+    line-height: 80px;
+    margin: 0 40px;
+    color: black;
+    padding-top: 4px;
+}
+
+
+.nav-container {
+    
+	position: fixed;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	background: Black;
+}
+
+.menu__item {
+	position: relative;
+	padding:0 6vw;
+}
+
+.menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.4s;
+}
+
+.menu__item-link::before {
+	all: initial;
+	counter-increment: menu;
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+}
+
+.menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+}
+
+.menu__item-img {
+	z-index: 2;
+	pointer-events: none;
+	position: absolute;
+	height: 12vh;
+	max-height: 600px;
+	opacity: 0;
+	left: 8%;
+	top: 10%;
+	transform: scale(0);
+}
+
+.menu__item-link:hover + .menu__item-img {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 0.4s;
+}
+
+.menu {
+	padding: 10vh 0 25vh;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	font-size: 7vw;
+    font-family: Helvetica;
+    color: rgb(197, 194, 194);
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
+	pointer-events: none;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transition: all 0.1s;
+	transform: translateX(60px);
+}
+
+.menu__item-link:hover ~ .marquee .marquee__inner {
+	opacity: 1;
+	transform: translateX(0px);
+	transition-duration: 0.4s;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: 7vw;
+	padding: 0 1vw;
+	line-height: 1.15;
+}
+
+.marquee span {
+	font-style: italic;
+}
+
+
+.menu-open,
+.menu-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+    margin: 0 40px;
+	padding-top: 0.29vw;
+	font-size: 20px;
+	cursor: pointer;
+}
+.socials {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 40px 100px;
+}
+
+.socials span {
+	text-transform: uppercase;
+	margin: 0 20px;
+	letter-spacing: 0px;
+}
+
+/* horizontal scroll items  */
+
+
+/* about page styles */
+
+#js-scroll {
+    height: 200%;
+}
+
+.about__container {
+    width: 50%;
+    margin: 180px 0 100px 100px;
+    padding: 40px;
+    /* border: 1px solid #525252; */
+}
+
+.about__container p {
+    margin: 60px 0;
+    color: #fff;
+    font-size: 46px;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.about__container p span {
+    font-family: "GrandSlang Roman";
+}
+
+.about__container-contact-link a {
+    color: #fff;
+}
+
+p.about__container-link {
+    font-size: 26px;
+}
+
+.about__container-link a {
+    color: #fff;
+    font-size: 26px;
+}
+
+.cursor-follow {
+    position: absolute;
+    background: url(../images/cursor.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    z-index: -1;
+ 
+    user-select: none;
+    pointer-events: none;
+    transform: translate(5px, 5px);
+}
+
+@media(max-width: 900px) {
+    .about__container {
+        width: 70%;
+        margin: 140px 0 60px 40px;
+    }
+
+    .cursor-follow {
+        display: none;
+    }
+}
+
+/* project section */
+
+.project__container {
+    width: 70%;
+    margin: 100px auto;
+    /* border: 1px solid #5c5c5c; */
+    color: #fff;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.project__container-title h1{
+    color: #fff;
+    font-family: "Helvetica";
+    font-size: 120px;
+}
+
+.project__container-subtitle {
+    margin: 20px 0;
+    font-family: "Neue Montreal";
+    font-size: 16px;
+}
+
+.project__container-images {
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    padding: 40px 0;
+}
+
+.project__image {
+    background: red;
+    width: 600px;
+    height: 500px;
+    margin: 40px auto;
+}
+
+.project__image-one {
+    background: url(../6/Images/front.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-two {
+    position: relative;
+    top: -100px;
+    left: -260px;
+    background: url(../6/Images/1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-three {
+    position: relative;
+    left: 300px;
+    background: url(../6/Images/2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project__image-four {
+    position: relative;
+    top: -200px;
+    left: -100px;
+    background: url(../6/Images/3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.project-next-link {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-next-link a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Helvetica";
+    font-size: 100px;
+}
+
+.anime-js-title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+@media(max-width: 900px) {
+    .project__container-title h1 {
+        font-size: 40px;
+    }
+    .watch {
+        display: none !important;
+  }
+    .project__container {
+        width: 80%;
+    }
+
+    .project__container-images {
+        width: 70vw;
+        
+    }
+
+    .project__image {
+        width: 90%;
+    }
+
+    .project__image-one, .project__image-two, .project__image-three, .project__image-four {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
